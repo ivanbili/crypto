@@ -57,6 +57,6 @@ if __name__ == "__main__":
     po = PaddingOracle()
     good_cipher = sys.argv[1]; # "f20bdba6ff29eed7b046d1df9fb7000058b1ffb4210a580f748b4ac714c001bd4a61044426fb515dad3f21f08aa577c0bdf302936266926ff37dbf7035d5eeb4"
     decoded_text = "Decoded text is:\n"
-    for i in range(64, len(good_cipher)+1-64, 32):
+    for i in range(0, len(good_cipher)+1-64, 32):
         decoded_text = decoded_text + po.decode(good_cipher[i:i+32], good_cipher[i+32:i+64])
     print decoded_text
